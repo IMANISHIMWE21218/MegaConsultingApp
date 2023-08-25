@@ -1,0 +1,575 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- dustech/about.html  13 Nov 2019 12:55:21 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+
+    <title> MEGA CONSULTING CPA LTD </title>
+    
+    <link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/odometer-theme-default.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/jquery.fancybox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="gear two">
+                    <svg viewbox="0 0 100 100" fill="#131e4a">
+                        <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                    </svg>
+                </div>
+                <div class="gear three">
+                    <svg viewbox="0 0 100 100" fill="#fd5f17">
+                        <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+        
+        
+
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-1">
+            <nav class="navigation navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                            {% if navigation_bar_data.logo %}
+                            <a class="navbar-brand" href="index-2.html">
+                                <img src="{{ navigation_bar_data.logo.url }}" alt>
+                            </a>
+                            {% endif %}
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse navigation-holder">
+                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'landingPage' %}">Home</a>
+                            </li>
+
+                            <li><a href="{% url 'aboutUs' %}">About</a></li>
+
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'allservices' %}">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'allservices' %}">All Services</a></li>
+                                    <li><a href="{% url 'audit_And_Non_Assurance_Services' %}">Audit & Non-Assurance Services</a></li>
+                                    <li><a href="{% url 'tax_Advisory_Services' %}">Tax Advisory Services</a></li>
+                                    <li><a href="{% url 'accounting_and_finance_Services' %}">Accounting and Finance Services</a></li>
+                                    <li><a href="{% url 'business_Governance_Advisory' %}">Business Governance Advisory Services</a></li>
+                                    <li><a href="{% url 'company_secretarial_services' %}">Company secretarial Services</a></li>
+                                    <li><a href="{% url 'management_Consulting_services' %}">Management Consulting Services</a></li>
+                                    <li><a href="{% url 'IT_Consultancy_services' %}">IT Consultancy Services</a></li>
+                                    
+                                </ul>
+                            </li>
+                           
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'blog' %}">Blog</a>
+                                
+                            </li>
+                            <li><a href="{% url 'contactUs' %}">Contact</a></li>
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+                    <div class="search-contact">
+                        <div class="header-search-area">
+                            <div class="header-search-form">
+                                <form class="form">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Search here">
+                                    </div>
+                                    <button type="submit" class="btn"><i class="ti-search"></i></button>
+                                </form>
+                            </div>
+                            <div>
+                                <button class="btn open-btn"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="call">
+                                <i class="fi flaticon-call"></i>
+                                <p>Call us anytime</p>
+                                <h5>{{ navigation_bar_data.mobile_contact }}</h5>
+                            </div>
+                            <a href="#" class="theme-btn">Contact us</a>
+                        </div>
+                    </div>
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->
+
+
+        <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h2>About us</h2>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>        
+        <!-- end page-title -->
+
+
+
+        <!-- start about-us-section -->
+        <section class="about-us-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="section-title">
+                            <span>About us</span>
+                            <h2>{{ about_us_instance.aboutUsTitle }}</h2>
+                        </div>
+                        <div class="details">
+                            <p>{{ about_us_instance.aboutUsDescription }}</p>
+                            <div class="clearfix">
+                                <ul>
+                                    <li><i class="ti-check"></i> Integrity</li>
+                                    <li><i class="ti-check"></i> Expertise</li>
+                                    <li><i class="ti-check"></i> Empowerment</li>
+                                </ul>
+                                <ul>
+                                    <li><i class="ti-check"></i> Innovation</li>
+                                    <li><i class="ti-check"></i> collaboration</li>
+                                </ul>
+                            </div>
+                            <div class="btns">
+                                <a href="#" class="theme-btn">Our Services</a>
+                                <a href="#" class="theme-btn-s3">Contact with us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="right-col">
+                            <div class="img-holder">
+                                <img src="{{ about_us_instance.sideImage.url }}" alt>
+                            </div>
+                            <div class="video-holder">
+                                <a href="https://www.youtube.com/embed/{{ about_us_instance.youtube_video_id }}?autoplay=1" class="hero-video-btn video-btn"  data-type="iframe" tabindex="0"><i class="fi flaticon-play-button"></i>Watch our intro video</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- end about-us-section -->
+
+
+        <!-- start why-choose-section -->
+        <section class="why-choose-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+                        <div class="section-title-s3">
+                            <span>Our Features</span>
+                            <h2>Why Choose Us!</h2>
+                            <p>Experience Excellence with Your Trusted Advisors at MEGA CONSULTING CPA LTD - Empowering Your Financial Success!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="why-choose-grids clearfix">
+                            {% for feature in whyYouUsFeatures %}
+                            <div class="grid">
+                                <i class="fi {{ feature.icon }}"></i>
+                                <h3>{{ feature.title }}</h3>
+                                <p>{{ feature.description }}</p>
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end why-choose-section -->
+
+
+        <!-- start testimonials-section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-lg-offset-3">
+                        <div class="section-title-s4">
+                            <span>Testimonials</span>
+                            <h2>What People say’s About us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <div class="testimonial-left-img-holder">
+                            <img src="{% static 'assets/images/testimonials/man.png' %}" alt>
+                        </div>
+                    </div>
+                    <div class="col col-md-8">
+                        <div class="testimonial-grids testimonial-slider clearfix">
+                            {% for testimonial in testimonials %}
+                            <div class="grid">
+                                <div class="quote">
+                                    <i class="fi flaticon-quote"></i>
+                                    <p>{{ testimonial.quote }}</p>
+                                </div>
+                                <div class="client-info">
+                                    <div class="img-holder">
+                                        <img src="{{ testimonial.client_image.url }}" alt>
+                                    </div>
+                                    <div class="details">
+                                        <h5>{{ testimonial.client_name }}</h5>
+                                        <p>{{ testimonial.designation }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end testimonials-section -->
+
+
+        <!-- start featured-project-section -->
+        <section class="mission-vision-section section-padding">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="row">
+                    <div class="col">
+                        <div class="section-title-s5">
+                            <span>Our Mission</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Section Title -->
+        
+                <!-- Mission and Vision Grids -->
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="grid">
+                            <span>Our Mission</span>
+                            
+                            <!-- <h2>What We Aim For</h2> -->
+                            <p>{{ about_us_instance.ourMission}}</p>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="grid">
+                            <span>Our Vision</span>
+                            <!-- <h2>What We Aspire To</h2> -->
+                    <p>{{ about_us_instance.ourVision}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Mission and Vision Grids -->
+            </div>
+        </section>
+        
+        
+        
+        <!-- end featured-project-section -->
+
+
+        <!-- start partners-section -->
+        <section class="partners-section">
+            <h2 class="hidden">Partners</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="partner-grids partners-slider">
+                           
+                            {% for partner in partners %}
+                            <div class="grid">
+                                <img src="{{ partner.image.url }}" alt>
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end partners-section -->
+
+
+        <!-- start fun-fact-section -->
+        <section class="fun-fact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="fun-fact-grids clearfix">
+                            <div class="grid">
+                                <div class="info">
+                                    <i class="fi ti-user"></i>
+                                    <h3><span class="odometer" data-count="{{ about_us_instance.employedMembers}}">00</span></h3>
+                                    <p>Employed</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="info">
+                                    <i class="fi flaticon-quote"></i>
+                                    <h3><span class="odometer" data-count="{{ about_us_instance.completedTasks}}">00</span></h3>
+                                    <p>Tasks Completed</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="info">
+                                    <i class="fi flaticon-trophy"></i>
+                                    <h3><span class="odometer" data-count="{{ about_us_instance.awardworn}}">00</span>+</h3>
+                                    <p>Award Won</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="info">
+                                    <i class="fi flaticon-like-1"></i>
+                                    <h3><span class="odometer" data-count="100">00</span>%</h3>
+                                    <p>Satisfied customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end fun-fact-section -->
+
+
+        <!-- start team-section -->
+        <section class="team-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+                        <div class="section-title-s5">
+                            <span>Our Team</span>
+                            <h2>Dedicated Team</h2>
+                            <p>Hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="team-grids">
+
+                            {% for member in team_members %}
+                            <div class="grid">
+                                <div class="img-social">
+                                    <div class="img-holder">
+                                        <img src="{{ member.memberImage.url }}" alt>
+                                    </div>
+                                    <div class="social">
+                                        <ul>
+                                            {% if member.facebook_link %}
+                                            <li><a href="{{ member.facebook_link }}"><i class="ti-facebook"></i></a></li>
+                                            {% endif %}
+                                            {% if member.twitter_link %}
+                                            <li><a href="{{ member.twitter_link }}"><i class="ti-twitter-alt"></i></a></li>
+                                            {% endif %}
+                                            {% if member.linkedin_link %}
+                                            <li><a href="{{ member.linkedin_link }}"><i class="ti-linkedin"></i></a></li>
+                                            {% endif %}
+                                            {% if member.pinterest_link %}
+                                            <li><a href="{{ member.pinterest_link }}"><i class="ti-pinterest"></i></a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <h3>{{ member.memberName }}</h3>
+                                    <span>{{ member.position }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                              
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end team-section -->
+
+
+        <!-- start cta-section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-md-6">
+                        <div class="cta-text">
+                            <h3>{{ topfooter.title }}</h3>
+                            <p>{{ topfooter.description }}</p>
+                        </div>
+                    </div>
+                    <div class="col col-lg-5 col-lg-offset-1 col-md-6">
+                        <div class="contact-info">
+                            <div>
+                                <i class="fi flaticon-call"></i>
+                                <h4>Call us</h4>
+                                <p>{{ topfooter.phoneNumber }}</p>
+                            </div>
+                            <div>
+                                <i class="fi flaticon-contact"></i>
+                                <h4>Email us</h4>
+                                <p>{{ topfooter.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta-section -->
+       
+
+
+        <!-- start site-footer -->
+        <footer class="site-footer">
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget about-widget">
+                                <div class="logo widget-title">
+                                    <img src="{{ footer_instance.logo.url }}" alt>
+                                </div>
+                                <p>{{ footer_instance.footer_description }}</p>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li><a href="{{ footer_instance.facebook_link }}"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="{{ footer_instance.twitter_link }}"><i class="ti-twitter-alt"></i></a></li>
+                                        <li><a href="{{ footer_instance.linkedin_link }}"><i class="ti-linkedin"></i></a></li>
+                                        <li><a href="{{ footer_instance.pinterest_link }}"><i class="ti-pinterest"></i></a></li>
+                                        <li><a href="{{ footer_instance.video_link }}"><i class="ti-vimeo-alt"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our services</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Meet team</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget contact-widget service-link-widget">
+                                <div class="widget-title">
+                                    <h3>Our Address</h3>
+                                </div>
+                                <ul>
+                                    <li><span>Address:</span> {{ footer_instance.address }}</li>
+                                    <li><span>Phone:</span> {{ footer_instance.phone }}</li>
+                                    <li><span>Email:</span> {{ footer_instance.email }}</li>
+                                    <li><span>Office Time:</span> {{ footer_instance.office_time }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title">
+                                    <h3>Newsletter</h3>
+                                </div>
+                                <p>You will be notified when something new will appear.</p>
+                                <form>
+                                    <div class="input-1">
+                                        <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    </div>
+                                    <div class="submit clearfix">
+                                        <button type="submit"><i class="ti-email"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright"><a href="templateshub.net">Templates Hub</a></p>
+                            <div class="extra-link">
+                                <ul>
+                                    <li><a href="#">Privacy & Policy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- end site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+ 
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins for this template -->
+    <script src="{% static 'assets/js/jquery-plugin-collection.js' %}"></script>
+
+    <!-- Custom script for this template -->
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+
+<!-- dustech/about.html  13 Nov 2019 12:55:21 GMT -->
+</html>

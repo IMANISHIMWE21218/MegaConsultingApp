@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!-- dustech/service-single.html  13 Nov 2019 12:55:53 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+
+    <title> MEGA CONSULTING CPA LTD </title>
+    
+    <link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/odometer-theme-default.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/jquery.fancybox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="gear two">
+                    <svg viewbox="0 0 100 100" fill="#131e4a">
+                        <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                    </svg>
+                </div>
+                <div class="gear three">
+                    <svg viewbox="0 0 100 100" fill="#fd5f17">
+                        <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+       <!-- Start header -->
+       <header id="header" class="site-header header-style-1">
+        <nav class="navigation navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="open-btn">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        {% if navigation_bar_data.logo %}
+                        <a class="navbar-brand" href="index-2.html">
+                            <img src="{{ navigation_bar_data.logo.url }}" alt>
+                        </a>
+                        {% endif %}
+                </div>
+                <div id="navbar" class="navbar-collapse collapse navigation-holder">
+                    <button class="close-navbar"><i class="ti-close"></i></button>
+                    <ul class="nav navbar-nav">
+                        <li class="menu-item-has-children">
+                            <a href="{% url 'landingPage' %}">Home</a>
+                        </li>
+
+                        <li><a href="{% url 'aboutUs' %}">About</a></li>
+
+                        <li class="menu-item-has-children">
+                            <a href="{% url 'allservices' %}">Services</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'allservices' %}">All Services</a></li>
+                                <li><a href="{% url 'audit_And_Non_Assurance_Services' %}">Audit & Non-Assurance Services</a></li>
+                                <li><a href="{% url 'tax_Advisory_Services' %}">Tax Advisory Services</a></li>
+                                <li><a href="{% url 'accounting_and_finance_Services' %}">Accounting and Finance Services</a></li>
+                                <li><a href="{% url 'business_Governance_Advisory' %}">Business Governance Advisory Services</a></li>
+                                <li><a href="{% url 'company_secretarial_services' %}">Company secretarial Services</a></li>
+                                <li><a href="{% url 'management_Consulting_services' %}">Management Consulting Services</a></li>
+                                <li><a href="{% url 'IT_Consultancy_services' %}">IT Consultancy Services</a></li>
+                                
+                            </ul>
+                        </li>
+                       
+                        <li class="menu-item-has-children">
+                            <a href="{% url 'blog' %}">Blog</a>
+                            
+                        </li>
+                        <li><a href="{% url 'contactUs' %}">Contact</a></li>
+                    </ul>
+                </div><!-- end of nav-collapse -->
+
+                <div class="search-contact">
+                    <div class="header-search-area">
+                        <div class="header-search-form">
+                            <form class="form">
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Search here">
+                                </div>
+                                <button type="submit" class="btn"><i class="ti-search"></i></button>
+                            </form>
+                        </div>
+                        <div>
+                            <button class="btn open-btn"><i class="ti-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="call">
+                            <i class="fi flaticon-call"></i>
+                            <p>Call us anytime</p>
+                            <h5>{{ navigation_bar_data.mobile_contact }}</h5>
+                        </div>
+                        <a href="#" class="theme-btn">Contact us</a>
+                    </div>
+                </div>
+            </div><!-- end of container -->
+        </nav>
+    </header>
+    <!-- end of header -->
+
+
+        <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h2>Audit & Non-Assurance Services</h2>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>        
+        <!-- end page-title -->
+
+
+        <!-- start service-single-section -->
+        <section class="service-single-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-9 col-md-push-3">
+                        <div class="service-single-content">
+                            <div class="service-single-slider">
+                                <img src="{% static 'assets/images/service-single/img-1.jpg' %}" alt>
+                            </div>
+                            <h2>Audit & Non-Assurance Services</h2>
+                            <i>Ensuring Financial Integrity and Operational Excellence through our Comprehensive Audit Services</i>
+                            <p style="margin-top: 10px;">At MEGA CONSULTING, we understand the critical role audits play in maintaining financial integrity, identifying risks, and ensuring compliance. As a leading provider of audit and non-assurance audit services, we are committed to delivering accurate, reliable, and actionable insights that help businesses thrive. With our experienced team of auditors and customized approach, we offer a comprehensive range of services designed to meet the unique needs of our clients.</p>
+                            <div class="benefit clearfix">
+                                <div class="details">
+                                    <h3>Benefits of Service</h3>
+                                    <ul>
+                                        <li><span>1</span> Enhanced Financial Integrity</li>
+                                        <li><span>2</span> Mitigated Risks and Compliance</li>
+                                        <li><span>3</span> Improved Operational Efficiency</li>
+                                        <li><span>4</span> Industry-Specific Insights</li>
+                                    </ul>
+                                    <p>Housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+                                </div>
+                                <div class="img-holder">
+                                    <img src="{% static 'assets/images/service-single/benefit-pic.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="why-choose-service">
+                                <h3>Why Choose This Service</h3>
+                                <p>Salesman and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewe regor then turned to look</p>
+                                <div class='sub service'>
+                                    <h5>Experience and Expertise</h5>
+                                    <p>With years of experience in the audit industry, our team of highly skilled professionals possesses in-depth knowledge of auditing practices, regulations, and industry standards. We stay updated with the latest developments to provide our clients with the highest level of expertise.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Client-Centric Approach</h5>
+                                    <p>We believe in building strong relationships with our clients and understanding their specific objectives and challenges. Our tailored approach ensures that our audit services are aligned with their unique needs, helping them achieve their financial and operational goals.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Advanced Tools and Technology</h5>
+                                    <p>We leverage cutting-edge audit tools and technologies to enhance the efficiency and effectiveness of our services. By harnessing data analytics and innovative methodologies, we deliver comprehensive and valuable insights that drive informed decision-making.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Industry-Specific Knowledge</h5>
+                                    <p>Our audit team possesses deep industry expertise across various sectors, allowing us to understand the specific challenges and regulatory requirements businesses face. We bring this specialized knowledge to each engagement, ensuring compliance and identifying industry-specific risks.</p>
+                                </div>
+
+                               <!-- Our Audit Services -->
+
+                                <div class='sub service'>
+                                <h2 style="padding-top: 45px;">Our Audit Services</h2>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Financial Audits</h5>
+                                    <p>Our financial audits provide a thorough examination of financial statements, records, and supporting documentation. Our meticulous approach includes assessing the accuracy and completeness of financial information, verifying compliance with accounting principles, and evaluating internal controls. By delivering an unbiased opinion on financial statements, we help clients build trust with stakeholders, including investors, lenders, and regulatory bodies.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Compliance Audits</h5>
+                                    <p>We conduct compliance audits to ensure businesses meet legal, regulatory, and industry-specific requirements. Our team evaluates adherence to applicable laws, regulations, and standards, such as data privacy regulations, environmental laws, and financial reporting requirements. By identifying areas of non-compliance and recommending corrective actions, we help clients mitigate risks and avoid penalties.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Internal Audits</h5>
+                                    <p>Our internal audit services help organizations evaluate and improve their internal controls, risk management processes, and operational efficiency. By conducting a comprehensive assessment, we identify control weaknesses, streamline processes, and enhance governance structures. Our recommendations enable clients to strengthen their control environment, optimize resource allocation, and reduce the risk of fraud or errors.</p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Specialized Audits</h5>
+                                    <p>In addition to traditional audits, we offer specialized audit services tailored to specific needs. This includes IT audits to assess the effectiveness of information systems and cybersecurity measures, forensic audits to investigate suspected fraud or financial irregularities, and performance audits to evaluate the efficiency and effectiveness of operations. Our specialized audits provide clients with critical insights and actionable recommendations.</p>
+                                </div>
+
+
+
+                                <!-- Our Non-Assurance Audit Services -->
+
+                                <div class='sub service'>
+                                    <h2 style="padding-top: 45px;">Non-Assurance Audit Services</h2>
+                                </div>
+    
+
+                                <div class='sub service'>
+                                    <h5>Due Diligence Reviews</h5>
+                                    <p>Our due diligence reviews help clients make informed business decisions by assessing the financial and operational aspects of potential investments, partnerships, or acquisitions.
+                                       We carefully analyze financial statements, business operations, market conditions, and risks to uncover potential issues and hidden liabilities. Our comprehensive due diligence reports empower clients to negotiate better deals and make sound investment choices.
+                                    </p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Operational Audits</h5>
+                                    <p>We conduct operational audits to identify areas of inefficiency, process bottlenecks, and cost-saving opportunities within organizations.  By evaluating workflows, resource utilization, and performance metrics, we help clients optimize their operations, improve productivity, and reduce operational risks. Our operational audit services provide practical recommendations for enhancing business performance and achieving strategic objectives.
+                                    </p>
+                                </div>
+
+                                <div class='sub service'>
+                                    <h5>Risk Assessments</h5>
+                                    <p>Our risk assessment services assist businesses in identifying and mitigating potential risks that could impact their operations, financial stability, or reputation. We collaborate with clients to identify and prioritize risks, assess their potential impact, and develop risk management strategies. Our comprehensive risk assessments help clients navigate uncertain environments and implement effective risk mitigation measures.</p>
+                                </div>
+                                <!-- <div class='sub service'>
+                                    <h5>Industry-Specific Knowledge</h5>
+                                    <p> dfsdf</p>
+                                </div> -->
+                            </div>
+                            
+                            
+                            <a href="#" class="theme-btn">Get the service</a>                            
+                        </div>
+                    </div>
+                    <div class="col col-md-3 col-md-pull-9">
+                        <div class="service-sidebar">
+                            <div class="widget service-list-widget">
+                                <ul>
+                                    <li><a href="{% url 'allservices' %}">All Service</a></li>
+                                    <li class="current"><a href="{% url 'audit_And_Non_Assurance_Services' %}">Audit & Non-Assurance</a></li>
+                                    <li><a href="{% url 'tax_Advisory_Services' %}">Tax Advisory</a></li>
+                                    <li><a href="{% url 'accounting_and_finance_Services' %}">Accounting and Finance</a></li>
+                                    <li><a href="{% url 'business_Governance_Advisory' %}">Business Governance Advisory</a></li>
+                                    <li><a href="{% url 'company_secretarial_services' %}">Company secretarial</a></li>
+                                    <li><a href="{% url 'management_Consulting_services' %}">Management Consulting</a></li>
+                                    <li><a href="{% url 'IT_Consultancy_services' %}">IT Consultancy</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget download-widget">
+                                <ul>
+                                    <li><a href="#"><i class="ti-zip"></i>Company presentation</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget contact-widget">
+                                <div>
+                                    <h5>We are Industrial experts Team</h5>
+                                    <a href="#">Contact with us</a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end service-single-section -->
+
+        <!-- start team-section -->
+        <section class="team-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+                        <div class="section-title-s5">
+                            <span>Our Team</span>
+                            <h2>Dedicated Team</h2>
+                            <p>Hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="team-grids">
+
+                            {% for member in team_members %}
+                            <div class="grid">
+                                <div class="img-social">
+                                    <div class="img-holder">
+                                        <img src="{{ member.memberImage.url }}" alt>
+                                    </div>
+                                    <div class="social">
+                                        <ul>
+                                            {% if member.facebook_link %}
+                                            <li><a href="{{ member.facebook_link }}"><i class="ti-facebook"></i></a></li>
+                                            {% endif %}
+                                            {% if member.twitter_link %}
+                                            <li><a href="{{ member.twitter_link }}"><i class="ti-twitter-alt"></i></a></li>
+                                            {% endif %}
+                                            {% if member.linkedin_link %}
+                                            <li><a href="{{ member.linkedin_link }}"><i class="ti-linkedin"></i></a></li>
+                                            {% endif %}
+                                            {% if member.pinterest_link %}
+                                            <li><a href="{{ member.pinterest_link }}"><i class="ti-pinterest"></i></a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <h3>{{ member.memberName }}</h3>
+                                    <span>{{ member.position }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                              
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end team-section -->
+
+
+          <!-- start cta-section -->
+          <section class="cta-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 col-md-6">
+                        <div class="cta-text">
+                            <h3>{{ topfooter.title }}</h3>
+                            <p>{{ topfooter.description }}</p>
+                        </div>
+                    </div>
+                    <div class="col col-lg-5 col-lg-offset-1 col-md-6">
+                        <div class="contact-info">
+                            <div>
+                                <i class="fi flaticon-call"></i>
+                                <h4>Call us</h4>
+                                <p>{{ topfooter.phoneNumber }}</p>
+                            </div>
+                            <div>
+                                <i class="fi flaticon-contact"></i>
+                                <h4>Email us</h4>
+                                <p>{{ topfooter.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta-section -->
+       
+
+
+        <!-- start site-footer -->
+        <footer class="site-footer">
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget about-widget">
+                                <div class="logo widget-title">
+                                    <img src="{{ footer_instance.logo.url }}" alt>
+                                </div>
+                                <p>{{ footer_instance.footer_description }}</p>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li><a href="{{ footer_instance.facebook_link }}"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="{{ footer_instance.twitter_link }}"><i class="ti-twitter-alt"></i></a></li>
+                                        <li><a href="{{ footer_instance.linkedin_link }}"><i class="ti-linkedin"></i></a></li>
+                                        <li><a href="{{ footer_instance.pinterest_link }}"><i class="ti-pinterest"></i></a></li>
+                                        <li><a href="{{ footer_instance.video_link }}"><i class="ti-vimeo-alt"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our services</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Meet team</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget contact-widget service-link-widget">
+                                <div class="widget-title">
+                                    <h3>Our Address</h3>
+                                </div>
+                                <ul>
+                                    <li><span>Address:</span> {{ footer_instance.address }}</li>
+                                    <li><span>Phone:</span> {{ footer_instance.phone }}</li>
+                                    <li><span>Email:</span> {{ footer_instance.email }}</li>
+                                    <li><span>Office Time:</span> {{ footer_instance.office_time }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title">
+                                    <h3>Newsletter</h3>
+                                </div>
+                                <p>You will be notified when something new will appear.</p>
+                                <form>
+                                    <div class="input-1">
+                                        <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    </div>
+                                    <div class="submit clearfix">
+                                        <button type="submit"><i class="ti-email"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright"><a href="templateshub.net">Templates Hub</a></p>
+                            <div class="extra-link">
+                                <ul>
+                                    <li><a href="#">Privacy & Policy</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- end site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+ 
+
+
+
+   <!-- All JavaScript files
+    ================================================== -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins for this template -->
+    <script src="{% static 'assets/js/jquery-plugin-collection.js' %}"></script>
+
+    <!-- Custom script for this template -->
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+
+<!-- dustech/service-single.html  13 Nov 2019 12:55:56 GMT -->
+</html>

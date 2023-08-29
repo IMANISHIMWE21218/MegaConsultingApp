@@ -178,8 +178,8 @@
                                 <div class="clearfix"></div>
                                 <div data-swiper-parallax="500" class="slide-btns">
                                     {% if slide.title %}
-                                    <a href="#" class="theme-btn">Our services</a>
-                                    <a href="#" class="theme-btn-s2">More about us</a>
+                                    <a href="{% url 'allservices' %}" class="theme-btn">Our services</a>
+                                    <a href="{% url 'aboutUs' %}" class="theme-btn-s2">More about us</a>
                                     {% endif %}
                                 </div>
                             </div>
@@ -508,8 +508,8 @@
                             </ul>
                         </div> -->
                         <div class="btns">
-                            <a href="#" class="theme-btn">Our Services</a>
-                            <a href="#" class="theme-btn-s3">Contact with us</a>
+                            <a href="{% url 'allservices' %}" class="theme-btn">Our Services</a>
+                            <a href="{% url 'contactUs' %}" class="theme-btn-s3">Contact with us</a>
                         </div>
                     </div>
                 </div>

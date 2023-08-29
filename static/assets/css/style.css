@@ -983,7 +983,7 @@ img {
 }
 
 .blog-sidebar .about-widget .img-holder img {
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 .blog-sidebar .about-widget p {

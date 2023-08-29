@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .models import (
     Topbar,
     NavigationBar,
@@ -109,14 +110,47 @@ def blog(request):
     topfooter = TopFooter.objects.first()
     footer_instance = Footer.objects.first()
     posts = BlogPost.objects.all()
+    
    
+    paginator = Paginator(posts, 3)  # Display 3 posts per page
+
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
+    
+    recent_posts = BlogPost.objects.all()
+
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'posts': posts,
+        'recent_posts': recent_posts,
     }
     return render(request, 'Mega Consulting-Website/blog.html', context)
+
+
+def blogSingle(request, pk):
+    navigation_bar_data = NavigationBar.objects.first()
+    topfooter = TopFooter.objects.first()
+    footer_instance = Footer.objects.first()
+    post = BlogPost.objects.get(id = pk)
+    recent_posts = BlogPost.objects.all()
+    tag = BlogPost.objects.get(id = pk)
+   
+    context = {
+        'navigation_bar_data': navigation_bar_data,
+        'topfooter': topfooter,
+        'footer_instance': footer_instance,
+        'post': post,
+        'recent_posts': recent_posts,
+        'tag': tag,
+    }
+    return render(request, 'Mega Consulting-Website/blog-single.html', context)
 
 
 def contactUs(request):

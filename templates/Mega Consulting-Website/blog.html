@@ -123,7 +123,7 @@
                                 <p>Call us anytime</p>
                                 <h5>{{ navigation_bar_data.mobile_contact }}</h5>
                             </div>
-                            <a href="#" class="theme-btn">Contact us</a>
+                            <a href="{% url 'contactUs' %}" class="theme-btn">Contact us</a>
                         </div>
                     </div>
                 </div><!-- end of container -->
@@ -151,8 +151,6 @@
                 <div class="row">
                   <div class="col col-md-8">
                     <div class="blog-content">
-                        
-                      
                         {% for post in posts %}
                         <div class="post format-gallery">
                             <div class="entry-media post-slider">
@@ -169,32 +167,48 @@
                                 <li><a href="#"><i class="ti-user"></i> {{ post.author }}</a></li>
                             </ul>
                             <h3><a href="#">{{ post.title }}</a></h3>
-                            <p>{{ post.content }}</p>
-                            <a href="#" class="theme-btn">Read More</a>
+                            <p>{{ post.content|truncatewords:35 }}</p>
+                            <a href="/blogSingle/{{post.id}}" class="theme-btn">Read More</a>
                         </div>
                         {% endfor %}
-                        
-
-
-                           
-                            <div class="pagination-wrapper pagination-wrapper-left">
-                                <ul class="pg-pagination">
-                                    <li>
-                                        <a href="#" aria-label="Previous">
-                                            <i class="fi flaticon-back"></i>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <i class="fi flaticon-next"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    
+                        <div class="pagination-wrapper pagination-wrapper-left">
+                            <ul class="pg-pagination">
+                                {% if posts.has_previous %}
+                                <li>
+                                    <a href="?page=1" aria-label="First">
+                                        <i class="fi flaticon-back"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="?page={{ posts.previous_page_number }}" aria-label="Previous">
+                                        <i class="fi flaticon-back"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                    
+                                {% for num in posts.paginator.page_range %}
+                                <li{% if num == posts.number %} class="active"{% endif %}>
+                                    <a href="?page={{ num }}">{{ num }}</a>
+                                </li>
+                                {% endfor %}
+                    
+                                {% if posts.has_next %}
+                                <li>
+                                    <a href="?page={{ posts.next_page_number }}" aria-label="Next">
+                                        <i class="fi flaticon-next"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="?page={{ posts.paginator.num_pages }}" aria-label="Last">
+                                        <i class="fi flaticon-next"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
                         </div>
+                    </div>
+                    
                     </div>
                     <div class="col col-md-4">
                         <div class="blog-sidebar">
@@ -203,8 +217,8 @@
                                 <div class="img-holder">
                                     <img src="{% static 'assets/images/blog/about-widget.jpg' %}" alt>
                                 </div>
-                                <p>Heavy fur muff that covered the whole of her lower arm towards the viewer egor then turned</p>
-                                <a href="#">More about us</a>
+                                <p>Experience Excellence with Your Trusted Advisors at MEGA CONSULTING CPA LTD - Empowering Your Financial Success!</p>
+                                <a href="{% url 'aboutUs' %}">More about us</a>
                             </div>
                             <div class="widget search-widget">
                                 <h3>Search</h3>
@@ -218,43 +232,34 @@
                             <div class="widget category-widget">
                                 <h3>Categories</h3>
                                 <ul>
-                                    <li><a href="#">Chemical Industry <span>(2)</span></a></li>
-                                    <li><a href="#">Manufacturing <span>(3)</span></a></li>
-                                    <li><a href="#">Latest Technology <span>(7)</span></a></li>
-                                    <li><a href="#">Delivery   <span>(5)</span></a></li>
-                                    <li><a href="#">Power and Energy <span>(10)</span></a></li>
+                                    <li><a href="#">Tax Advisory <span>(2)</span></a></li>
+                                    <li><a href="#">Accounting <span>(3)</span></a></li>
+                                    <li><a href="#">Business Governance Advisory <span>(7)</span></a></li>
+                                    <li><a href="#">Management Consulting    <span>(5)</span></a></li>
+                                    <li><a href="#">IT Consultancy <span>(10)</span></a></li>
+                                    <li><a href="#">Company Secretarial <span>(10)</span></a></li>
+                                    <li><a href="#">Finance <span>(10)</span></a></li>
                                 </ul>
                             </div>
                             <div class="widget recent-post-widget">
-                                <h3>Recent post</h3>
+                                <h3>Recent posts</h3>
                                 <div class="posts">
+                                    {% for post in recent_posts %}
                                     <div class="post">
                                         <div class="img-holder">
-                                            <img src="{% static 'assets/images/recent-posts/img-1.jpg' %}" alt>
+                                            {% if post.blog_picture %}
+                                            <img src="{{ post.blog_picture.url }}" alt="{{ post.alt_text }}">
+                                            {% else %}
+                                            <!-- Provide a default image here if no image is associated -->
+                                            <img src="{% static 'assets/images/default-image.jpg' %}" alt="Default Alt Text">
+                                            {% endif %}
                                         </div>
                                         <div class="details">
-                                            <h4><a href="#">Samsa was a travelling salesman and above</a></h4>
-                                            <span class="date"><i class="ti-timer"></i>Oct 31 2019</span>
+                                            <h4><a href="#">{{ post.title }}</a></h4>
+                                            <span class="date"><i class="ti-timer"></i>{{ post.date|date:"M d Y" }}</span>
                                         </div>
                                     </div>
-                                    <div class="post">
-                                        <div class="img-holder">
-                                            <img src="{% static 'assets/images/recent-posts/img-2.jpg' %}" alt>
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="#">Raising a heavy fur muff that covered</a></h4>
-                                            <span class="date"><i class="ti-timer"></i>Oct 31 2019</span>
-                                        </div>
-                                    </div>
-                                    <div class="post">
-                                        <div class="img-holder">
-                                            <img src="{% static 'assets/images/recent-posts/img-3.jpg' %}" alt>
-                                        </div>
-                                        <div class="details">
-                                            <h4><a href="#">Window at the dull weather drops</a></h4>
-                                            <span class="date"><i class="ti-timer"></i>Oct 31 2019</span>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                             <div class="widget tag-widget">

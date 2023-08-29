@@ -126,7 +126,7 @@
                                 <p>Call us anytime</p>
                                 <h5>{{ navigation_bar_data.mobile_contact }}</h5>
                             </div>
-                            <a href="#" class="theme-btn">Contact us</a>
+                            <a href="{% url 'contactUs' %}" class="theme-btn">Contact us</a>
                         </div>
                     </div>
                 </div><!-- end of container -->
@@ -172,8 +172,8 @@
                                 </ul>
                             </div>
                             <div class="btns">
-                                <a href="#" class="theme-btn">Our Services</a>
-                                <a href="#" class="theme-btn-s3">Contact with us</a>
+                                <a href="{% url 'allservices' %}" class="theme-btn">Our Services</a>
+                                <a href="{% url 'contactUs' %}" class="theme-btn-s3">Contact with us</a>
                             </div>
                         </div>
                     </div>

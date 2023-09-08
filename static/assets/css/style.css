@@ -1796,7 +1796,7 @@ img {
 }
 
 .header-style-1 .navbar-brand img, .header-style-2 .navbar-brand img, .header-style-3 .navbar-brand img {
-  max-width: 165px;
+  max-width: 190px;
 }
 
 .header-style-1 .search-contact, .header-style-2 .search-contact, .header-style-3 .search-contact {
@@ -2557,7 +2557,7 @@ img {
 }
 
 .site-footer .about-widget .logo {
-  max-width: 180px;
+  max-width: 195px;
 }
 
 .site-footer .about-widget p {
@@ -3490,7 +3490,7 @@ img {
 /* Adjusting the CSS for the mission and vision section */
 /* Adjusting the CSS for the mission and vision section */
 .mission-vision-section {
-  background: url("../images/featured-project-bg.jpg") center center/cover no-repeat local;
+  background: url("../images/featured-project-bg.jpg") center/cover no-repeat local;
   padding-bottom: 0;
 }
 
@@ -3513,7 +3513,6 @@ img {
 .mission-vision-section .section-title-s5 span {
   color: #fd5f17;
   font-size: 18px;
-  font-size: 1.125rem;
 }
 
 .mission-vision-section .grid {
@@ -3523,33 +3522,58 @@ img {
 }
 
 .mission-vision-section .grid span {
-  color: #cecccc;
-  font-size: 18px;
-  font-size: 1.125rem;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
 }
-
-/* Styles for the h2 and p tags inside the grid */
-/* .mission-vision-section .grid h2 {
-  font-size: 22px;
-  font-size: 1.375rem;
-  color: #fff;
-  margin-bottom: 1em;
-} */
 
 .mission-vision-section .grid p {
   color: #cecccc;
-  font-size: 14px;
-  font-size: 0.875rem;
-  margin-top: 20px;
+  font-size: 16px;
+  margin-top: 25px;
   margin-bottom: 0;
   padding-bottom: 2em;
 }
 
-@media (max-width: 991px) {
-  .mission-vision-section .col {
-      flex-basis: 100%;
-      max-width: 100%;
-  }
+
+/* Core Values Row */
+.mission-vision-section .core-values.full-screen {
+  position: relative;
+  height: auto; /* Make it full-screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(19, 30, 74, 0.9);
+  color: #ffffff;
+  margin: 14px; /* Remove padding */
+  text-align: center;
+  padding-top: 25px;
+}
+
+.mission-vision-section .core-values h2 {
+  margin-top: 45px;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  
+}
+
+.mission-vision-section .core-values .core-value {
+  margin-bottom: 10px;
+}
+
+.mission-vision-section .core-values .core-value h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #cecccc;
+}
+
+.mission-vision-section .core-values .core-value p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 auto 15px;
+  padding: 40px;
+  color: #cecccc;
 }
 
 

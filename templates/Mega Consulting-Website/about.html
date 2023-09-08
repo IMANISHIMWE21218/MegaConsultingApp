@@ -39,7 +39,7 @@
     <div class="page-wrapper">
 
         <!-- start preloader -->
-        <div class="preloader">
+        <!-- <div class="preloader">
             <div class="loader">
                 <div class="gear two">
                     <svg viewbox="0 0 100 100" fill="#131e4a">
@@ -52,7 +52,7 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- end preloader -->
         
         
@@ -69,7 +69,7 @@
                             <span class="icon-bar"></span>
                         </button>
                             {% if navigation_bar_data.logo %}
-                            <a class="navbar-brand" href="index-2.html">
+                            <a class="navbar-brand" href="{% url 'landingPage' %}">
                                 <img src="{{ navigation_bar_data.logo.url }}" alt>
                             </a>
                             {% endif %}
@@ -109,12 +109,12 @@
                     <div class="search-contact">
                         <div class="header-search-area">
                             <div class="header-search-form">
-                                <form class="form">
+                                <!-- <form class="form">
                                     <div>
                                         <input type="text" class="form-control" placeholder="Search here">
                                     </div>
                                     <button type="submit" class="btn"><i class="ti-search"></i></button>
-                                </form>
+                                </form> -->
                             </div>
                             <div>
                                 <button class="btn open-btn"><i class="ti-search"></i></button>
@@ -239,7 +239,7 @@
                 <div class="row">
                     <div class="col col-md-4">
                         <div class="testimonial-left-img-holder">
-                            <img src="{% static 'assets/images/testimonials/man.png' %}" alt>
+                            <!-- <img src="{% static 'assets/images/testimonials/man.png' %}" alt> -->
                         </div>
                     </div>
                     <div class="col col-md-8">
@@ -278,33 +278,62 @@
                 <div class="row">
                     <div class="col">
                         <div class="section-title-s5">
-                            <span>Our Mission</span>
+                            <span class="title-white">Our Mission &Vision</span>
                         </div>
                     </div>
                 </div>
                 <!-- End Section Title -->
         
-                <!-- Mission and Vision Grids -->
                 <div class="row">
                     <div class="col col-md-6">
                         <div class="grid">
-                            <span>Our Mission</span>
-                            
-                            <!-- <h2>What We Aim For</h2> -->
-                            <p>{{ about_us_instance.ourMission}}</p>
+                            <span class="title-white">Our Mission</span>
+                            <p>{{ about_us_instance.ourMission }}</p>
                         </div>
                     </div>
                     <div class="col col-md-6">
                         <div class="grid">
-                            <span>Our Vision</span>
-                            <!-- <h2>What We Aspire To</h2> -->
-                    <p>{{ about_us_instance.ourVision}}</p>
+                            <span class="title-white">Our Vision</span>
+                            <p>{{ about_us_instance.ourVision }}</p>
                         </div>
                     </div>
                 </div>
-                <!-- End Mission and Vision Grids -->
+        
+                <!-- Core Values Row -->
+                
+                    <div class="core-values full-screen">
+                        <h2>Our core values</h2>
+                        <div class="core-value">
+                            <h3 class="core-value-heading">Integrity</h3>
+                            <p>We uphold the highest ethical standards in all our interactions, fostering trust and transparency with our clients, partners, and team members.</p>
+                        </div>
+                        <div class="core-value">
+                            <h3 class="core-value-heading">Expertise</h3>
+                            <p>We are dedicated to continuous learning and professional development, ensuring that we offer the most current and proficient advice and solutions to our clients.</p>
+                        </div>
+                        <div class="core-value">
+                            <h3 class="core-value-heading">Innovation</h3>
+                            <p>We embrace creativity and forward-thinking to provide innovative solutions that address complex challenges and drive sustainable growth for our clients.</p>
+                        </div>
+                        <div class="core-value">
+                            <h3 class="core-value-heading">Collaboration</h3>
+                            <p>We foster a collaborative environment that values diverse perspectives, enabling us to work together effectively and deliver comprehensive, well-rounded solutions.</p>
+                        </div>
+                        <div class="core-value">
+                            <h3 class="core-value-heading">Empowerment</h3>
+                            <p>We empower our clients and team members alike by providing them with the knowledge, tools, and guidance they need to make informed decisions and achieve their goals.</p>
+                        </div>
+                    </div>
+                
+                <!-- End Core Values Row -->
+
             </div>
         </section>
+        
+        
+        
+        
+        
         
         
         
@@ -315,7 +344,7 @@
         <section class="partners-section">
             <h2 class="hidden">Partners</h2>
             <div class="container">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col col-xs-12">
                         <div class="partner-grids partners-slider">
                            
@@ -327,7 +356,7 @@
                             
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div> <!-- end container -->
         </section>
         <!-- end partners-section -->
@@ -381,9 +410,9 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
-                            <span>Our Team</span>
+                            <!-- <span>Our Team</span> -->
                             <h2>Dedicated Team</h2>
-                            <p>Hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him</p>
+                            <p>Meet our dedicated team of experts, united by a passion for excellence and a commitment to turning your vision into reality.</p>
                         </div>
                     </div>
                 </div>

@@ -38,7 +38,7 @@
     <div class="page-wrapper">
 
         <!-- start preloader -->
-        <div class="preloader">
+        <!-- <div class="preloader">
             <div class="loader">
                 <div class="gear two">
                     <svg viewbox="0 0 100 100" fill="#131e4a">
@@ -51,7 +51,7 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- end preloader -->
 
        <!-- Start header -->
@@ -66,7 +66,7 @@
                         <span class="icon-bar"></span>
                     </button>
                         {% if navigation_bar_data.logo %}
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="{% url 'landingPage' %}">
                             <img src="{{ navigation_bar_data.logo.url }}" alt>
                         </a>
                         {% endif %}
@@ -265,9 +265,9 @@
                 <div class="row">
                     <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
                         <div class="section-title-s5">
-                            <span>Our Team</span>
+                            <!-- <span>Our Team</span> -->
                             <h2>Dedicated Team</h2>
-                            <p>Dedicated team driving success, delivering tailored solutions for stability, growth. Get to know our exceptional professionals at Mega Consulting Ltd.</p>
+                            <p>Meet our dedicated team of experts, united by a passion for excellence and a commitment to turning your vision into reality.</p>
                         </div>
                     </div>
                 </div>

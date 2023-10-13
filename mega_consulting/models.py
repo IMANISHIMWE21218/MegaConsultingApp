@@ -24,14 +24,23 @@ class NavigationBar(models.Model):
     
 
 
-class ImageSlider(models.Model):
-    title = models.CharField(max_length=100, blank=True)
-    description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='sliderImage/', blank=False)
+# class ImageSlider(models.Model):
+#     title = models.CharField(max_length=100, blank=True)
+#     description = models.TextField(blank=True)
+#     image = models.ImageField(upload_to='sliderImage/', blank=False)
     
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
+
+class ImageSlider(models.Model):
+     title = models.CharField(max_length=100, blank=True)
+     description = models.TextField(blank=True)
+     image = models.ImageField(upload_to='sliderImage/', blank=False)
+
+     def __str__(self):
+        return f"{'imagefile'}, Title: {self.title}"
+
     
 
 
@@ -43,8 +52,8 @@ class SlideDashboardSection(models.Model):
         # Add more icon choices as needed
     ]
 
-    count = models.CharField(max_length=9, help_text='The count number (e.g., "01.", "02.")', blank=False)
-    text = models.CharField(max_length=30, help_text='The section title', blank=False)
+    count = models.CharField(max_length=9, blank=False, null=True)
+    text = models.CharField(max_length=30, help_text='The section title', blank=False, null=True)
     icon = models.CharField(max_length=50, choices=ICON_CHOICES, help_text='The icon class name')
 
     def __str__(self):
@@ -140,7 +149,7 @@ class Footer(models.Model):
     address = models.CharField(max_length=100)
     phone = models.CharField(max_length=15)
     email = models.EmailField()
-    office_time = models.CharField(max_length=15, help_text='office time  (e.g.,"10AM - 17PM")')
+    office_time = models.CharField(max_length=35, help_text='office time  (e.g.,"Monday- Friday 8h-18h00")')
 
     footer_description = models.TextField()
     logo = models.ImageField(upload_to='logo/', blank=True, null=True)
@@ -307,6 +316,13 @@ class BlogPost(models.Model):
     blog_picture = models.ImageField(upload_to='blog_images/', blank=True, null=True)
     alt_text = models.CharField(max_length=200)
     
+    def __str__(self):
+        return self.title
+    
+class PdfFile(models.Model):
+    title = models.CharField(max_length=255)
+    pdf = models.FileField(upload_to='pdfs/')
+
     def __str__(self):
         return self.title
 

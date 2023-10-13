@@ -105,14 +105,14 @@
 
                 <div class="search-contact">
                     <div class="header-search-area">
-                        <div class="header-search-form">
+                        <!-- <div class="header-search-form">
                             <form class="form">
                                 <div>
                                     <input type="text" class="form-control" placeholder="Search here">
                                 </div>
                                 <button type="submit" class="btn"><i class="ti-search"></i></button>
                             </form>
-                        </div>
+                        </div> -->
                         <div>
                             <button class="btn open-btn"><i class="ti-search"></i></button>
                         </div>
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                             <div class="why-choose-service">
-                                <h3>Why Choose This Service</h3>
+                                <h3>Why Our Service</h3>
                                
                                 <div class='sub service'>
                                     <h5>Results-Driven Approach</h5>
@@ -221,7 +221,7 @@
 
 
                             </div>
-                            <a href="#" class="theme-btn">Get the service</a>                            
+                            <!-- <a href="#" class="theme-btn">Get the service</a>                             -->
                         </div>
                     </div>
                     <div class="col col-md-3 col-md-pull-9">
@@ -240,13 +240,17 @@
                             </div>
                             <div class="widget download-widget">
                                 <ul>
-                                    <li><a href="#"><i class="ti-zip"></i>Company presentation</a></li>
+                                    <li>
+                                        <a href="{{ pdf.pdf.url }}" target="_blank">
+                                            <i class="ti-zip"></i>{{ pdf.title }}
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="widget contact-widget">
                                 <div>
-                                    <h5>We are Industrial experts Team</h5>
-                                    <a href="#">Contact with us</a>
+                                    <h5>Your rusted Business Advisor</h5>
+                                    <a href="{% url 'contactUs' %}">Get in touch with us</a>
                                 </div>
                             </div>
                         </div>                    

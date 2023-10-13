@@ -21,5 +21,6 @@ urlpatterns = [
     path('IT_Consultancy_services', views.it_Consultancy_services, name='IT_Consultancy_services' ),
 
     path('send_email', views.send_email, name='send_email'),
+    path('pdf_detail/', views.pdf_detail, name='pdf_detail'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

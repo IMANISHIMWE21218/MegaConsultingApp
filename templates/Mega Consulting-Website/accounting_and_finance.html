@@ -175,7 +175,7 @@
                                 </div>
                             </div>
                             <div class="why-choose-service">
-                                <h3>Why Choose This Service</h3>
+                                <h3>Why Our Service</h3>
                                 <p><span>↳</span> 
                                      Our team consists of highly skilled accountants and finance professionals with extensive knowledge and expertise in accounting principles, financial management, and industry-specific practices. With years of experience, we are well-equipped to handle complex financial challenges and deliver accurate, reliable, and insightful services. 
                                 </p>
@@ -222,7 +222,20 @@
 
                                 <div class='sub service'>
                                     <h5>Financial Advisory and Consulting</h5>
-                                    <p>We offer financial advisory and consulting services to assist businesses in making critical financial decisions. This includes financial modeling, investment analysis, business valuation, cost analysis, and profitability assessment. Our expertise and insights help clients identify growth opportunities, mitigate risks, and optimize financial outcomes.</p>
+                                    <p>We offer financial advisory and consulting services to assist businesses in making critical financial decisions.
+                                        <br>
+                                         This includes:
+                                         <br>
+                                        <span>•	Financial modelling</span>
+                                        <br>
+                                        <span>•	Investment analysis</span>
+                                        <br>
+                                        <span>•	Business valuation</span>
+                                        <br>
+                                        <span>•	cost analysis</span>
+                                        <br>
+                                        <span>•	Profitability assessment.</span> 
+                                        </p>
                                 </div>
 
                                 <div class='sub service'>
@@ -233,7 +246,7 @@
                             </div>
                             
                            
-                            <a href="#" class="theme-btn">Get the service</a>                            
+                            <!-- <a href="#" class="theme-btn">Get the service</a>                             -->
                         </div>
                     </div>
                     <div class="col col-md-3 col-md-pull-9">
@@ -252,13 +265,17 @@
                             </div>
                             <div class="widget download-widget">
                                 <ul>
-                                    <li><a href="#"><i class="ti-zip"></i>Company presentation</a></li>
+                                    <li>
+                                        <a href="{{ pdf.pdf.url }}" target="_blank">
+                                            <i class="ti-zip"></i>{{ pdf.title }}
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="widget contact-widget">
                                 <div>
-                                    <h5>We are Industrial experts Team</h5>
-                                    <a href="#">Contact with us</a>
+                                    <h5>Your rusted Business Advisor</h5>
+                                    <a href="{% url 'contactUs' %}">Get in touch with us</a>
                                 </div>
                             </div>
                         </div>                    

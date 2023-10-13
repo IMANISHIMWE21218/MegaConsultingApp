@@ -22,6 +22,8 @@ admin.site.register(IT_Consultancy_contact)
 
 
 
+
+
 admin.site.register(audit_And_Non_Assurance_team)
 admin.site.register(taxadvisory_team)
 admin.site.register(accounting_and_finance_team)
@@ -34,6 +36,11 @@ admin.site.register(Testimonial)
 admin.site.register(PartnerAndBrands)
 admin.site.register(Office)
 admin.site.register(BlogPost)
+
+admin.site.register(PdfFile)
+
+
+
 
 
 

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from django.http import FileResponse
+from django.shortcuts import get_object_or_404
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .models import (
     Topbar,
@@ -22,6 +24,7 @@ from .models import (
     accounting_and_finance_team,
     Office,
     BlogPost,
+    PdfFile,
 )
 
 def index(request):
@@ -172,7 +175,7 @@ def contactUs(request):
 
 def allServices(request):
     navigation_bar_data = NavigationBar.objects.first()
-    topfooter = audit_And_Non_Assurance_contact.objects.first()
+    topfooter = TopFooter.objects.first()
     footer_instance = Footer.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
@@ -190,11 +193,14 @@ def audit_And_Non_Assurance_Services(request):
     topfooter = audit_And_Non_Assurance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = audit_And_Non_Assurance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
+        
     }
     return render(request, 'Mega Consulting-Website/audit_And_NonAssuranceServices.html', context)
 
@@ -203,11 +209,13 @@ def taxAdvisoryServices(request):
     topfooter = taxadvisory_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = taxadvisory_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/tax_Advisory_Services.html', context)
 
@@ -216,11 +224,13 @@ def accounting_and_finance_Services(request):
     topfooter = accounting_and_finance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = accounting_and_finance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/accounting_and_finance.html', context)
 
@@ -229,11 +239,13 @@ def business_Governance_Advisory(request):
     topfooter = accounting_and_finance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = accounting_and_finance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/business_Governance_Advisory.html', context)
 
@@ -242,11 +254,13 @@ def company_secretarial_services(request):
     topfooter = accounting_and_finance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = accounting_and_finance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/Company_secretarial_services.html', context)
 
@@ -255,11 +269,13 @@ def management_Consulting_services(request):
     topfooter = accounting_and_finance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = accounting_and_finance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/management_Consulting_services.html', context)
 
@@ -268,10 +284,16 @@ def it_Consultancy_services(request):
     topfooter = accounting_and_finance_contact.objects.first()
     footer_instance = Footer.objects.first()
     team_members = accounting_and_finance_team.objects.all()
+    pdf = PdfFile.objects.first()
     context = {
         'navigation_bar_data': navigation_bar_data,
         'topfooter': topfooter,
         'footer_instance': footer_instance,
         'team_members': team_members,
+        'pdf': pdf,
     }
     return render(request, 'Mega Consulting-Website/IT_Consultancy_services.html', context)
+
+def pdf_detail(request):
+    pdf = PdfFile.objects.first() 
+    return render(request, 'pdf_detail.html', {'pdf': pdf})

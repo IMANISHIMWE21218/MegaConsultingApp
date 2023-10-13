@@ -174,7 +174,7 @@ img {
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 @media (max-width: 991px) {
@@ -3512,7 +3512,7 @@ img {
 
 .mission-vision-section .section-title-s5 span {
   color: #fd5f17;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .mission-vision-section .grid {
@@ -3609,7 +3609,7 @@ img {
   -ms-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
-  top: 0;
+  top: 20px;
 }
 
 @media (max-width: 1199px) {
@@ -4933,7 +4933,7 @@ img {
 .service-single-section .service-single-content .theme-btn,
 .service-single-section .service-single-content .theme-btn-s2,
 .service-single-section .service-single-content .theme-btn-s3 {
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .service-single-section .service-single-content h2 {
